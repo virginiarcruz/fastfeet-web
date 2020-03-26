@@ -3,13 +3,13 @@ import { Switch } from 'react-router-dom';
 import Route from './Route';
 
 import Login from '../pages/Login/Login';
-import Dashboard from '../pages/Dashboard';
+import Encomendas from '../pages/Encomendas';
 
 export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Login} />
-      <Route path="/dashboard" component={Dashboard} isPrivate />
+      <Route path="/encomendas" component={Encomendas} isPrivate />
     </Switch>
   );
 }

@@ -11,4 +11,8 @@ export const ButtonWrapper = styled.button`
   width: 100%;
   padding: 8px 10px;
   border-radius: 4px;
+  transition: background 0.2s;
+  &:hover {
+    filter: brightness(95%);
+  }
 `;
