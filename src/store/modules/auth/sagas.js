@@ -17,6 +17,7 @@ export function* signin({ payload }) {
 
   if (!user.provider) {
     console.log('usuário não encontrado');
+    return;
   }
 
   yield put(loginSuccess(token, user));
