@@ -8,7 +8,6 @@ export const ButtonWrapper = styled.button`
   font-weight: bold;
   font-size: 16px;
   text-align: center;
-  width: 100%;
   padding: 8px 10px;
   border-radius: 4px;
   transition: background 0.2s;

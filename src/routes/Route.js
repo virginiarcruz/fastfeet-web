@@ -20,7 +20,7 @@ export default function RouteWrapper({
 
   if (singed && !isPrivate) return <Redirect to="/encomendas" />;
 
-  const Layout = !singed ? AuthLayout : DefaultLayout;
+  const Layout = singed ? AuthLayout : DefaultLayout;
 
   return (
     <Route

@@ -1,7 +1,17 @@
 import React from 'react';
 
+import Title from '../../components/Title';
+import TableActions from '../../components/TableActions';
+
 // import { Container } from './styles';
 
-export default function Encomendas() {
-  return <h1>Encomendas aquuuuuuuuuiiiiiiii</h1>;
-}
+const Encomendas = () => {
+  return (
+    <>
+      <Title>Gerenciando encomendas</Title>
+      <TableActions />
+    </>
+  );
+};
+
+export default Encomendas;
