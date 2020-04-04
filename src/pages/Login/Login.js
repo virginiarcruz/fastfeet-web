@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
-import { loginRequest } from '~/store/modules/auth/actions';
+import { signInRequest } from '~/store/modules/auth/actions';
 
 import logo from '~/assets/fastfeet-logo.png';
 import { Logo, FormContainer } from './styles';
@@ -18,9 +18,11 @@ const schema = Yup.object().shape({
 
 export default function Login() {
   const dispatch = useDispatch();
+
   const handleSubmit = ({ email, password }) => {
-    dispatch(loginRequest(email, password));
+    dispatch(signInRequest(email, password));
   };
+
   return (
     <>
       <Logo src={logo} alt="FastFeet" />

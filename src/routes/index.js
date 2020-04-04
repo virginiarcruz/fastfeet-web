@@ -9,7 +9,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Login} />
-      <Route path="/encomendas" component={Encomendas} isPrivate />
+      <Route path="/encomendas" exact component={Encomendas} />
     </Switch>
   );
 }

@@ -1,7 +1,13 @@
 import React from 'react';
 
-import { Wrapper } from './styles';
+import { Wrapper, Header } from './styles';
 
-export default function DefaultLayout() {
-  return <Wrapper />;
+export default function DefaultLayout({ children }) {
+  return (
+    <Wrapper>
+      <Header />
+
+      {children}
+    </Wrapper>
+  );
 }
