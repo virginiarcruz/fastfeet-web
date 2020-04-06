@@ -12,15 +12,17 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  const { singed } = store.getState().auth;
+  const { signed } = store.getState().auth;
+  debugger;
 
-  console.log('singned', singed);
+  console.log('store', store.getState());
+  console.log('singssssssned', signed);
 
-  if (!singed && isPrivate) return <Redirect to="/" />;
+  if (!signed && isPrivate) return <Redirect to="/" />;
 
-  if (singed && !isPrivate) return <Redirect to="/encomendas" />;
+  if (signed && !isPrivate) return <Redirect to="/encomendas" />;
 
-  const Layout = singed ? AuthLayout : DefaultLayout;
+  const Layout = !signed ? AuthLayout : DefaultLayout;
 
   return (
     <Route
