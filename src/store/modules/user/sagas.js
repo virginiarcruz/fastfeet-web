@@ -1,3 +1,10 @@
-import { all } from 'redux-saga/effects';
+import { takeLatest, all } from 'redux-saga/effects';
+// import { toast } from 'react-toastify';
 
-export default all({});
+// import api from '../../../services/api';
+
+// import { updateProfileSuccess, updateProfileFailure } from './actions';
+
+export function* updateProfile({ payload }) {}
+
+export default all([takeLatest('@user/UPDATE_PROFILE_REQUEST', updateProfile)]);
