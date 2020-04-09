@@ -8,6 +8,8 @@ export const HeaderContainer = styled.header`
   padding: 20px 30px;
   display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Logo = styled.img`
@@ -16,6 +18,8 @@ export const Logo = styled.img`
 `;
 
 export const Nav = styled.nav`
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 `;
@@ -30,3 +34,5 @@ export const MenuItem = styled.li`
     margin-left: 20px;
   }
 `;
+
+export const Aside = styled.aside``;

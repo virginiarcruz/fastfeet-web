@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components/macro';
 // import 'react-perfect-scrollbar/dist/css/styles.css';
-// import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
 

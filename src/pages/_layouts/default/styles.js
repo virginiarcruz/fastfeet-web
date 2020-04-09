@@ -9,4 +9,6 @@ export const Wrapper = styled.div`
 
 export const Content = styled.main`
   padding: 40px 120px;
+  max-width: 960px;
+  margin: 0 auto;
 `;

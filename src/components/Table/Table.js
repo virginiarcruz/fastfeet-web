@@ -29,6 +29,24 @@ const Table = () => {
         <td>Wolfgang Amadeus</td>
         <td>Wgang Amadeus</td>
       </tr>
+      <tr>
+        <td>#02</td>
+        <td>Wolfgang Amadeus</td>
+        <td>#01</td>
+        <td>Wolfgang Amadeus</td>
+        <td>#01</td>
+        <td>Wolfgang Amadeus</td>
+        <td>Wgang Amadeus</td>
+      </tr>
+      <tr>
+        <td>#03</td>
+        <td>Wolfgang Amadeus</td>
+        <td>#01</td>
+        <td>Wolfgang Amadeus</td>
+        <td>#01</td>
+        <td>Wolfgang Amadeus</td>
+        <td>Wgang Amadeus</td>
+      </tr>
     </TableContainer>
   );
 };

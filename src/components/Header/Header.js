@@ -22,6 +22,10 @@ export default function Header() {
             <MenuItem key={item}> {item} </MenuItem>
           ))}
         </Menu>
+        <aside>
+          <p>Admin users</p>
+          <p> Sair do sistema</p>
+        </aside>
       </Nav>
     </HeaderContainer>
   );
