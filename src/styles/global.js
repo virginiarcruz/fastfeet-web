@@ -42,4 +42,11 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
+  input {
+  max-height: 36px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 4px 6px;
+  }
+
 `;

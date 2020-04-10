@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdSearch } from 'react-icons/md';
-import Input from '../Input';
+import { Input } from '@rocketseat/unform';
 
 import { Container } from './styles';
 
