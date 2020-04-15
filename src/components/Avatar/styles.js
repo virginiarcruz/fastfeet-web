@@ -21,8 +21,8 @@ export const Container = styled.div`
 export const Image = styled.img`
   background-color: ${purpleLight};
   border: 1px solid ${purpleDark};
-  border-radius: 95px;
-  width: 150px;
-  height: 150px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
 `;

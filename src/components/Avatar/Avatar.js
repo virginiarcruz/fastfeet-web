@@ -7,8 +7,8 @@ import { Container, Image } from './styles';
 const Avatar = () => {
   const { defaultValue, registerField } = useField('avatar');
 
-  const { file, setFile } = useState(defaultValue && defaultValue.id);
-  const { preview, setPreview } = useState(defaultValue && defaultValue.url);
+  const [file, setFile] = useState(defaultValue && defaultValue.id);
+  const [preview, setPreview] = useState(defaultValue && defaultValue.url);
 
   const ref = useRef();
 
@@ -37,7 +37,7 @@ const Avatar = () => {
 
   return (
     <Container>
-      <labe htmlFor="avatar">
+      <label htmlFor="avatar">
         <Image
           src={
             preview ||
@@ -48,12 +48,12 @@ const Avatar = () => {
         <input
           type="file"
           id="avatar"
-          accept="image/x"
+          accept="image/*"
           data-file={file}
           onChange={handleChange}
           ref={ref}
         />
-      </labe>
+      </label>
     </Container>
   );
 };

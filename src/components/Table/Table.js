@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import history from '~/services/history';
+import api from '~/services/api';
 
 import { TableContainer } from './styles';
 
 const Table = () => {
-  const headers = [
-    'ÏD',
-    'Destinatário',
-    'Entregador',
-    'Cidade',
-    'Estado',
-    'Status',
-    'Ações',
-  ];
+  const headers = ['ÏD', 'Nome', 'Email'];
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    async function getUsers() {
+      const response = await api.get('providers');
+
+      const data = response.data.map(user => user);
+
+      setUsers(data);
+    }
+
+    getUsers();
+  }, []);
+
+  console.log(users);
 
   return (
     <TableContainer>
@@ -20,33 +31,13 @@ const Table = () => {
           <th key={item}> {item} </th>
         ))}
       </tr>
-      <tr>
-        <td>#01</td>
-        <td>Wolfgang Amadeus</td>
-        <td>#01</td>
-        <td>Wolfgang Amadeus</td>
-        <td>#01</td>
-        <td>Wolfgang Amadeus</td>
-        <td>Wgang Amadeus</td>
-      </tr>
-      <tr>
-        <td>#02</td>
-        <td>Wolfgang Amadeus</td>
-        <td>#01</td>
-        <td>Wolfgang Amadeus</td>
-        <td>#01</td>
-        <td>Wolfgang Amadeus</td>
-        <td>Wgang Amadeus</td>
-      </tr>
-      <tr>
-        <td>#03</td>
-        <td>Wolfgang Amadeus</td>
-        <td>#01</td>
-        <td>Wolfgang Amadeus</td>
-        <td>#01</td>
-        <td>Wolfgang Amadeus</td>
-        <td>Wgang Amadeus</td>
-      </tr>
+      {users.map(user => (
+        <tr key={user}>
+          <td key={user.id}>{user.id}</td>
+          <td key={user.name}>{user.name}</td>
+          <td key={user.email}>{user.email}</td>
+        </tr>
+      ))}
     </TableContainer>
   );
 };
