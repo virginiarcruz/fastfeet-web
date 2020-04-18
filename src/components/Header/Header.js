@@ -34,7 +34,7 @@ export default function Header() {
         </Menu>
         <aside>
           <p>{profile.name}</p>
-          <button onClick={handleSignout}> Sair do sistema</button>
+          <button onClick={handleSignout}> Sair daqui</button>
         </aside>
       </Nav>
     </HeaderContainer>

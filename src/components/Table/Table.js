@@ -22,8 +22,6 @@ const Table = () => {
     getUsers();
   }, []);
 
-  console.log(users);
-
   return (
     <TableContainer>
       <tr>
